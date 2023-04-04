@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body{
+  background-color: black;
+  color: aliceblue;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .first-container{
+      background-color: rgb(44, 43, 43);
+      height: 100vh;
+      width: 70vh;
   }
-  to {
-    transform: rotate(360deg);
+  .h1-data{
+  font-size:40px;
+  font-weight: bolder;
+  padding: 40px;
   }
-}
+  .h3-data{
+      padding-top: 40px;
+      padding-left: 40px;
+  }
+  .inside-div{
+      display: flex;
+      margin-left: 40px;
+      margin-top: 40px;
+  }
+  .para-2{
+      margin-left: 40px;
+      color: rgb(117, 115, 115);
+  }
+  .input-div{
+  margin-left: 10px;
+  
+  }
+  input{
+      width: 35px;
+      margin-left: 20px;
+      background-color: black;
+      color: aliceblue;
+      border: none;
+      text-align: center;
+  }
+  .wrong-details{
+      margin-left: 30px;
+      margin-top: 22px;
+  }
+  button{
+      background-image: linear-gradient(to right,red,black,purple);
+      width: 200px;
+      height: 30px;
+      text-align: center;
+      color: aliceblue;
+      border: none;
+      margin-left: 30px;
+      margin-top: 20px;
+  }
+  .back{
+      margin-top: 90px;
+      margin-left: 40px;
+  }
+  @media screen and (max-width:400px) {
+      .first-container{
+          background-color: rgb(44, 43, 43);
+          height: 120vh;
+          width: 85vh;
+      }
+      .h1-data{
+          font-size:40px;
+          font-weight: bolder;
+          margin-left: 70px;
+          }
+          .h3-data{
+              margin-left: 70px;
+          }
+          .inside-div{
+              display: flex;
+              margin-left: 100px;
+              margin-top: 40px;
+          }
+          .input-div{
+              margin-left: 80px;
+          }
+          .wrong-details{
+              margin-left: 90px;
+              margin-top: 22px;
+          }
+          button{
+              background-image: linear-gradient(to right,red,black,purple);
+              width: 200px;
+              height: 30px;
+              text-align: center;
+              color: aliceblue;
+              border: none;
+              margin-left: 90px;
+              margin-top: 20px;
+          }
+          .back{
+              margin-top: 30px;
+              margin-left: 90px;
+          }
+  }

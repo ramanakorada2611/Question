@@ -1,24 +1,44 @@
-import logo from './logo.svg';
+import React, { useState } from 'react'
 import './App.css';
 
 function App() {
+  const [data,setData]=useState(new Array(4).fill(""))
+    const handleFunction=(ele,index)=>{
+        setData([...data.map((data1,index1)=>(index1===index)? ele.value: data1)])
+        //autofocus for next box
+        if(ele.nextBox){
+            ele.nextBox.focus()
+        }
+    }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+ <div className='first-container '>
+    <h1 className=' h1-data'>LOGO</h1>
+    <h3 className='h3-data'>Verification</h3>
+     <div className='inside-div'>
+       <p>sms otp</p>
+       <p className='para-2'>sent on-{data.join("")}</p>
+      </div>
+     <div className='input-div'>
+        {
+        data.map((otp,index)=>{
+            return (
+                <input type='text' name='otp' 
+                key={index}
+                value={otp}
+                onChange={e=>handleFunction(e.target,index)}
+                onFocus={e=>e.target.select()}
+                />
+            )
+          })
+        }
+     </div>
+     <p className='wrong-details'>Enter Wrong Details? <span className='text-danger' onClick={(e)=>setData([...data.map(clear=>"")])}>Re-enter</span></p>
+     <button onClick={(e)=>console.log("User Entered Otp:",data.join(""))} >Verify</button>
+     <p className='back'>Go Back To Home</p>
     </div>
+
+    </>
   );
 }
 
